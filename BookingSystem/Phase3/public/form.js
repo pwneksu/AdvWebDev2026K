@@ -74,6 +74,7 @@ async function onSubmit(event) {
     console.log("Description ➡️ ", data.echo.resourceDescription);
     console.log("Availability ➡️ ", data.echo.resourceAvailable);
     console.log("Price ➡️ ", data.echo.resourcePrice);
+    console.log("Price unit ➡️ ", data.echo.resourcePriceUnit);
 
     console.log("--------------------------");
     alert(msg);
