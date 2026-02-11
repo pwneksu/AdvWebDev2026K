@@ -137,7 +137,7 @@ function isResourceDescriptionValid(value) {
   const trimmed = value.trim();
 
   // Allowed: letters, numbers, Finnish letters, and space (based on your current regex)
-  const allowedPattern = /^[a-zA-Z0-9äöåÄÖÅ ><!\?\-\+\/\\]+$/;
+  const allowedPattern = /^[a-zA-Z0-9äöåÄÖÅ ]+$/;
 
   const lengthValid = trimmed.length >= 10 && trimmed.length <= 50;
   const charactersValid = allowedPattern.test(trimmed);

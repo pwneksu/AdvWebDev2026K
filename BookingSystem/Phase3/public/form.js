@@ -30,7 +30,7 @@ async function onSubmit(event) {
 
   const payload = {
     action: actionValue,
-    resourceName: $("resourceNamee")?.value ?? "",
+    resourceName: $("resourceName")?.value ?? "",
     resourceDescription: $("resourceDescription")?.value ?? "",
     resourceAvailable: $("resourceAvailable")?.checked ?? false,
     resourcePrice,
@@ -56,16 +56,17 @@ async function onSubmit(event) {
 
     // Creates an alert and a log message
     const data = await response.json();
-    let msg = "Server response " + `[${timestamp()}]\n`;
+    let msg = "Server response " + `[${data.timestamp || timestamp()}]\n`;
     msg += "--------------------------\n";
     msg += "Status ➡️ " + response.status + "\n";
     msg += "Action ➡️ " + data.echo.action + "\n";
-    msg += "Name ➡️ "+ data.echo.resourceName + "\n";
+    msg += "Name ➡️ " + data.echo.resourceName + "\n";
     msg += "Description ➡️ " + data.echo.resourceDescription + "\n";
     msg += "Availability ➡️ " + data.echo.resourceAvailable + "\n";
+    msg += "Price ➡️ " + data.echo.resourcePrice + "\n";
     msg += "Price unit ➡️ " + data.echo.resourcePriceUnit + "\n";
 
-    console.log("Server response " + `[${timestamp()}]`);
+    console.log("Server response " + `[${data.timestamp || timestamp()}]`);
     console.log("--------------------------");
     console.log("Status ➡️ ", response.status);
     console.log("Action ➡️ ", data.echo.action);
