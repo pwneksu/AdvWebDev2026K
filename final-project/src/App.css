@@ -1,0 +1,205 @@
+/* Wikipedia-style aesthetics */
+:root {
+  --background-color: #f6f6f6;
+  --content-background: #ffffff;
+  --link-color: #0645ad;
+  --border-color: #a2a9b1;
+  --header-height: 50px;
+  --sidebar-width: 176px;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--background-color);
+  color: #202122;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.wikipedia-header {
+  height: var(--header-height);
+  background-color: var(--content-background);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  font-size: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.wikipedia-logo {
+  line-height: 1;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 18px;
+  font-family: serif;
+}
+
+.logo-sub {
+  font-size: 10px;
+}
+
+.header-search input {
+  width: 300px;
+  padding: 5px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+}
+
+.user-links {
+  font-size: 13px;
+  color: var(--link-color);
+}
+
+/* Layout */
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Sidebar */
+.wikipedia-sidebar {
+  width: var(--sidebar-width);
+  padding: 15px 10px;
+  font-size: 13px;
+}
+
+.wikipedia-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.wikipedia-sidebar li {
+  margin-bottom: 5px;
+}
+
+.wikipedia-sidebar a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.sidebar-section-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #54595d;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  background-color: var(--content-background);
+  padding: 20px 40px;
+  border-left: 1px solid var(--border-color);
+}
+
+.article-title {
+  font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+  font-size: 1.8em;
+  margin-top: 0;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+}
+
+.short-description {
+  font-size: 0.85em;
+  color: #54595d;
+  margin-bottom: 15px;
+}
+
+.article-body h2 {
+  font-family: serif;
+  border-bottom: 1px solid var(--border-color);
+  margin-top: 25px;
+}
+
+.article-body p {
+  line-height: 1.6;
+}
+
+.article-body a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* Infobox */
+.infobox {
+  float: right;
+  width: 250px;
+  border: 1px solid var(--border-color);
+  background-color: #f8f9fa;
+  margin: 0 0 15px 15px;
+  padding: 5px;
+  border-spacing: 0;
+  font-size: 12px;
+}
+
+.infobox-title {
+  background-color: #eaecf0;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.infobox th {
+  text-align: left;
+  vertical-align: top;
+  width: 40%;
+  padding: 3px;
+}
+
+.infobox td {
+  padding: 3px;
+}
+
+.infobox-image {
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* Footer */
+.wikipedia-footer {
+  background-color: var(--background-color);
+  padding: 20px 40px;
+  border-top: 1px solid var(--border-color);
+  font-size: 12px;
+  margin-top: auto;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  margin-right: 15px;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.footer-license {
+  color: #54595d;
+}
